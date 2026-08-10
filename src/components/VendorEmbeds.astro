@@ -21,12 +21,28 @@
 <div id="vendor-embed-target"></div>
 
 <!-- ============================================================ -->
-<!-- VENDOR EMBED START — paste one vendor's snippet below         -->
+<!-- VENDOR EMBED START — Chatwoot (sandbox)                       -->
+<!-- Update baseUrl if this points at a self-hosted instance       -->
+<!-- rather than Chatwoot Cloud.                                   -->
 <!-- ============================================================ -->
 
-<!--
-<script src="https://vendor.example.com/widget.js" data-workspace-id="REPLACE_ME" defer></script>
--->
+<script is:inline>
+	(function (d, t) {
+		var BASE_URL = "https://app.chatwoot.com";
+		var g = d.createElement(t),
+			s = d.getElementsByTagName(t)[0];
+		g.src = BASE_URL + "/packs/js/sdk.js";
+		g.defer = true;
+		g.async = true;
+		s.parentNode.insertBefore(g, s);
+		g.onload = function () {
+			window.chatwootSDK.run({
+				websiteToken: "nXTv4XrDFwutiVxAnVTqkC2m",
+				baseUrl: BASE_URL,
+			});
+		};
+	})(document, "script");
+</script>
 
 <!-- ============================================================ -->
 <!-- VENDOR EMBED END                                              -->
