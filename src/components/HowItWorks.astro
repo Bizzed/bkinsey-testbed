@@ -1,0 +1,54 @@
+---
+const steps = [
+	{
+		number: "01",
+		title: "Tell us what you need",
+		description:
+			"Share your subject, grade level, and goals in a two-minute form.",
+	},
+	{
+		number: "02",
+		title: "Get matched with a tutor",
+		description:
+			"We pair you with a tutor suited to your goals, learning style, and schedule.",
+	},
+	{
+		number: "03",
+		title: "Start learning",
+		description:
+			"Meet online, track progress after every session, and adjust the plan as you go.",
+	},
+];
+---
+
+<section id="how-it-works" class="section">
+	<div class="container">
+		<div class="section-header">
+			<span class="eyebrow">How It Works</span>
+			<h2>Three steps to your first session</h2>
+		</div>
+
+		<div class="grid grid-3">
+			{
+				steps.map((step) => (
+					<div class="step">
+						<span class="step__number">{step.number}</span>
+						<h3>{step.title}</h3>
+						<p>{step.description}</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<style>
+	.step__number {
+		display: block;
+		font-size: 0.85rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		color: var(--color-ink-muted);
+		margin-bottom: var(--space-1);
+	}
+</style>

@@ -1,0 +1,45 @@
+---
+const programs = [
+	{
+		title: "1-on-1 Tutoring",
+		description:
+			"Matched with a dedicated tutor for ongoing, fully personalized support in the subjects that matter most.",
+	},
+	{
+		title: "Small Group Sessions",
+		description:
+			"Learn alongside two or three peers at a similar level, for a fraction of the cost of private lessons.",
+	},
+	{
+		title: "Test Prep",
+		description:
+			"Focused prep for the SAT, ACT, and state exams, with timed practice sets and a pacing strategy.",
+	},
+	{
+		title: "Homework Help",
+		description:
+			"Drop-in sessions for same-day homework support, no long-term commitment required.",
+	},
+];
+---
+
+<section id="programs" class="section section-alt">
+	<div class="container">
+		<div class="section-header">
+			<span class="eyebrow">Programs</span>
+			<h2>Support for every kind of learner</h2>
+			<p>Pick a single program or combine a few &mdash; every plan is built around the student, not a fixed curriculum.</p>
+		</div>
+
+		<div class="grid grid-4">
+			{
+				programs.map((program) => (
+					<div class="card">
+						<h3>{program.title}</h3>
+						<p>{program.description}</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
