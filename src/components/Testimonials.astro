@@ -1,0 +1,72 @@
+---
+const testimonials = [
+	{
+		quote:
+			"My son went from dreading math homework to asking for extra practice sets.",
+		name: "Dana R.",
+		role: "Parent",
+	},
+	{
+		quote:
+			"The SAT prep sessions were focused and never felt like busywork.",
+		name: "Malik T.",
+		role: "Student",
+	},
+	{
+		quote:
+			"Scheduling around three kids' activities used to be impossible. Now it's one calendar link.",
+		name: "Priya S.",
+		role: "Parent",
+	},
+];
+---
+
+<section id="reviews" class="section section-alt">
+	<div class="container">
+		<div class="section-header">
+			<span class="eyebrow">Reviews</span>
+			<h2>What families are saying</h2>
+		</div>
+
+		<div class="grid grid-3">
+			{
+				testimonials.map((t) => (
+					<figure class="card testimonial">
+						<blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
+						<figcaption>
+							<span class="testimonial__name">{t.name}</span>
+							<span class="testimonial__role">{t.role}</span>
+						</figcaption>
+					</figure>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<style>
+	.testimonial {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2);
+	}
+
+	.testimonial blockquote {
+		margin: 0;
+		font-size: 1rem;
+	}
+
+	.testimonial figcaption {
+		display: flex;
+		flex-direction: column;
+		font-size: 0.85rem;
+	}
+
+	.testimonial__name {
+		font-weight: 600;
+	}
+
+	.testimonial__role {
+		color: var(--color-ink-muted);
+	}
+</style>
